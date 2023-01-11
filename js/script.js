@@ -19,6 +19,29 @@ Allego screen di riferimento, ma sulla grafica siete liberi di fare come preferi
 
 console.log(Vue)
 
-const app = Vue.createApp();
+const app = Vue.createApp({
+    data(){
+        return {
+            list: [
+                {
+                    text: 'cucinare pranzo',
+                    done: false
+                },
+                {
+                    text: 'portare l\'auto dal gommista',
+                    done: false
+                },
+                {
+                    text: 'fare gli esercizi boolean',
+                    done: false
+                },
+                {
+                    text: 'attività fisica',
+                    done: false
+                },
+            ]
+        }
+    }
+});
 
 app.mount('#root');
