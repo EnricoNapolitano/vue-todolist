@@ -23,7 +23,7 @@
     <div id="root">
         <!-- INPUT & BUTTON -->
         <div class="cs-container cs-m-auto input-group mb-5">
-            <input type="text" class="form-control" placeholder="Scrivi nuova task" v-model.trim="newItem">
+            <input type="text" class="form-control" placeholder="Scrivi nuova task" v-model.trim="newItem" @keyup.enter="addItem">
             <button class="btn btn-outline-secondary"  type="button" @click="addItem">Aggiungi</button>
         </div>
         <!-- LIST -->
