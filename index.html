@@ -28,7 +28,7 @@
         </div>
         <!-- LIST -->
         <ul class="list-group container w-50">
-            <li v-for="(item, i) in list" class="list-group-item d-flex justify-content-between" @click="SUCCEDE(i)" >
+            <li v-for="(item, i) in list" class="list-group-item d-flex justify-content-between" @click="isDone(i)" >
                 <span :class="item.done ? deletion : ''">{{ item.text }}</span> <i class="fa-regular fa-trash-can" @click="removeItem(i)"></i>
             </li>
         </ul>

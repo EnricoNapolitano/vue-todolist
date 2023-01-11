@@ -52,7 +52,7 @@ const app = Vue.createApp({
             this.list.push({text: this.newItem, done: false});
             this.newItem = '';
         },
-        SUCCEDE(index){
+        isDone(index){
             this.list[index].done = !this.list[index].done;
         }
     }
