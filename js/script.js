@@ -17,3 +17,8 @@ Bonus:
 Allego screen di riferimento, ma sulla grafica siete liberi di fare come preferite 
 */
 
+console.log(Vue)
+
+const app = Vue.createApp();
+
+app.mount('#root');
