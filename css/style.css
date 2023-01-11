@@ -1,0 +1,17 @@
+/* GENERICS */
+figure {
+    width: 20%;
+}
+
+/* UTILS */
+.cs-container {
+    max-width: 400px;
+}
+.cs-m-auto {
+    margin: 20px auto;
+}
+
+/* ICON */
+.fa-trash-can {
+    cursor: pointer;
+}
