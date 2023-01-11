@@ -44,13 +44,18 @@ const app = Vue.createApp({
             deletion: 'text-decoration-line-through'
         }
     },
+    computed: {
+        newItemObject(){
+            return {text: this.newItem, done: false};
+        }
+    },
     methods: {
         removeItem(index) {
             this.list.splice(index, 1);
         },
         addItem(){
             if (this.newItem){
-                this.list.push({text: this.newItem, done: false});
+                this.list.push(this.newItemObject);
                 this.newItem = '';
             }
         },
