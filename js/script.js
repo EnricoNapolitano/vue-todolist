@@ -25,7 +25,7 @@ const app = Vue.createApp({
             list: [
                 {
                     text: 'cucinare pranzo',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'portare l\'auto dal gommista',
@@ -39,9 +39,11 @@ const app = Vue.createApp({
                     text: 'attività fisica',
                     done: false
                 },
-            ]
+            ],
+            delation: 'text-decoration-line-through'
         }
     }
+
 });
 
 app.mount('#root');
