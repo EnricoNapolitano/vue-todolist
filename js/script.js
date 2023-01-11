@@ -49,8 +49,10 @@ const app = Vue.createApp({
             this.list.splice(index, 1);
         },
         addItem(){
-            this.list.push({text: this.newItem, done: false});
-            this.newItem = '';
+            if (this.newItem){
+                this.list.push({text: this.newItem, done: false});
+                this.newItem = '';
+            }
         },
         isDone(index){
             this.list[index].done = !this.list[index].done;
