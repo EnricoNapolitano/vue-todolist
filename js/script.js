@@ -42,6 +42,11 @@ const app = Vue.createApp({
             ],
             delation: 'text-decoration-line-through'
         }
+    },
+    methods: {
+        removeItem(index) {
+            this.list.splice(index, 1);
+        }
     }
 
 });
