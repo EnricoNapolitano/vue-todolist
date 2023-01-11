@@ -22,6 +22,7 @@ console.log(Vue)
 const app = Vue.createApp({
     data(){
         return {
+            newItem: '',
             list: [
                 {
                     text: 'cucinare pranzo',
@@ -40,12 +41,16 @@ const app = Vue.createApp({
                     done: false
                 },
             ],
-            delation: 'text-decoration-line-through'
+            deletion: 'text-decoration-line-through'
         }
     },
     methods: {
         removeItem(index) {
             this.list.splice(index, 1);
+        },
+        addItem(){
+            this.list.push({text: this.newItem, done: false});
+            this.newItem = '';
         }
     }
 

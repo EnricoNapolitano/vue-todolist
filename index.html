@@ -23,13 +23,13 @@
     <div id="root">
         <!-- INPUT & BUTTON -->
         <div class="cs-container cs-m-auto input-group mb-5">
-            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            <button class="btn btn-outline-secondary"  type="button" id="button-addon1">Aggiungi</button>
+            <input type="text" class="form-control" placeholder="Scrivi nuova task" v-model.trim="newItem">
+            <button class="btn btn-outline-secondary"  type="button" @click="addItem">Aggiungi</button>
         </div>
         <!-- LIST -->
         <ul class="list-group container w-50">
-            <li v-for="(item, i) in list" :class="item.done ? delation : ''" class="list-group-item d-flex justify-content-between" >
-                {{ item.text }} <i class="fa-regular fa-trash-can" @click="removeItem(i)"></i>
+            <li v-for="(item, i) in list" class="list-group-item d-flex justify-content-between" >
+                <span :class="item.done ? deletion : ''">{{ item.text }}</span> <i class="fa-regular fa-trash-can" @click="removeItem(i)"></i>
             </li>
         </ul>
     </div>
