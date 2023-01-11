@@ -2,6 +2,9 @@
 figure {
     width: 20%;
 }
+li {
+    cursor: pointer;
+}
 
 /* UTILS */
 .cs-container {

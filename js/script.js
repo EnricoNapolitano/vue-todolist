@@ -51,9 +51,11 @@ const app = Vue.createApp({
         addItem(){
             this.list.push({text: this.newItem, done: false});
             this.newItem = '';
+        },
+        SUCCEDE(index){
+            this.list[index].done = !this.list[index].done;
         }
     }
-
 });
 
 app.mount('#root');
